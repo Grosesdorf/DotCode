@@ -1,0 +1,231 @@
+input[type="text"], 
+input[type="email"], 
+input[type="password"],
+input[type="date"],
+input[type="tel"]{
+	width : 100%;
+	height: 25px;
+	border : 2px solid #666688;
+	box-shadow: 0 0 5px 1px #666666;
+}
+select {
+	color : green;
+	font-weight: bold;
+}
+select option{
+	font-weight: normal;
+}
+select option:nth-child(even) {
+	color : red;
+}
+select option:nth-child(odd) {
+	color : blue;
+}
+select option:nth-last-child(2) {
+	font-weight : bold;
+}
+table {
+	width : 100%;
+	border : 0px;
+}
+td {
+	text-align : right; 
+	width : 50%;
+	height: 25px;
+	padding: 5px;
+}
+textarea {
+	width : 320px;
+	height : 50px;
+	border : 5px solid #CCCCCC;
+	resize : none;
+}
+img {
+	width: 150px;
+} 
+fieldset {
+	width : 350px;
+	padding: 5px;
+}
+fieldset fieldset{
+	padding: 5px;
+	width : 330px;
+}
+fieldset legend {
+	font-weight : bold;
+}
+fieldset fieldset legend {
+	font-weight : normal;
+}
+.tdCenter {
+	text-align : center;
+}
+.tdLeft {
+	text-align : left;
+}
+.inputLastName {
+	color : green;
+	font-weight : bold;
+}
+.radioBorder {
+	border : 4px solid blue;
+}
+.checkboxBorder {
+	border : 3px solid black;
+	background-color : yellow;
+}
+.rotateCheckBox:hover {
+	animation: slowRotate 3s;
+	-webkit-animation: slowRotate 3s;
+	-moz-animation: slowRotate 3s;
+	-o-animation: slowRotate 3s;
+	-ms-animation: slowRotate 3s;
+}
+input:focus, textarea:focus { 
+	background-color: #FFFFCC; 
+}
+@keyframes slowRotate {
+	0% {
+		transform: rotate(0deg);		
+	}
+	12.5% {
+		transform: rotate(90deg);
+	}
+	25% {
+		transform: rotate(180deg);
+	}
+	37.5% {
+		transform: rotate(270deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	62.5% {
+		transform: rotate(270deg);
+	}
+	75% {
+		transform: rotate(180deg);
+	}
+	87.5% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@-webkit-keyframes slowRotate {
+	0% {
+		transform: rotate(0deg);		
+	}
+	12.5% {
+		transform: rotate(90deg);
+	}
+	25% {
+		transform: rotate(180deg);
+	}
+	37.5% {
+		transform: rotate(270deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	62.5% {
+		transform: rotate(270deg);
+	}
+	75% {
+		transform: rotate(180deg);
+	}
+	87.5% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@-moz-keyframes slowRotate {
+	0% {
+		transform: rotate(0deg);		
+	}
+	12.5% {
+		transform: rotate(90deg);
+	}
+	25% {
+		transform: rotate(180deg);
+	}
+	37.5% {
+		transform: rotate(270deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	62.5% {
+		transform: rotate(270deg);
+	}
+	75% {
+		transform: rotate(180deg);
+	}
+	87.5% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@-o-keyframes slowRotate {
+	0% {
+		transform: rotate(0deg);		
+	}
+	12.5% {
+		transform: rotate(90deg);
+	}
+	25% {
+		transform: rotate(180deg);
+	}
+	37.5% {
+		transform: rotate(270deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	62.5% {
+		transform: rotate(270deg);
+	}
+	75% {
+		transform: rotate(180deg);
+	}
+	87.5% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@-ms-keyframes slowRotate {
+	0% {
+		transform: rotate(0deg);		
+	}
+	12.5% {
+		transform: rotate(90deg);
+	}
+	25% {
+		transform: rotate(180deg);
+	}
+	37.5% {
+		transform: rotate(270deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	62.5% {
+		transform: rotate(270deg);
+	}
+	75% {
+		transform: rotate(180deg);
+	}
+	87.5% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
