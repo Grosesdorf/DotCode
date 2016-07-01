@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson06</title>
+	<meta charset="utf-8">
+	<meta http-equiv= "X-UA-Compatible" content="IE=edge"> <!--IE8 compatibility mode to ignore-->
+	<link rel="stylesheet" href="css/styles.css">
+	<script type="text/javascript">
+		function displayNone(obj) {
+   			obj.style.display = "none";
+		}
+		
+		function display(id) {
+			document.getElementById(id).style.display='';
+		}
+
+		function innerHtmlToDiv(obj) {
+			document.getElementByClassName('div01').innerHTML = obj.innerHTML;
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><input type="button" name="button01" value="01" onclick="display('td01')"></td>
+			<td><input type="button" name="button02" value="02" onclick="display('td02')"></td>
+			<td><input type="button" name="button03" value="03" onclick="display('td03')"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="button04" value="04" onclick="display('td04')"></td>
+			<td><input type="button" name="button05" value="05" onclick="display('td05')"></td>
+			<td><input type="button" name="button06" value="06" onclick="display('td06')"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="button07" value="07" onclick="display('td07')"></td>
+			<td><input type="button" name="button08" value="08" onclick="display('td08')"></td>
+			<td><input type="button" name="button09" value="09" onclick="display('td09')"></td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td id="td01" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)">1</td>
+			<td id="td02" onclick="displayNone(this)">2</td>
+			<td id="td03" onclick="displayNone(this)">3</td>
+		</tr>
+		<tr>
+			<td id="td04" onclick="displayNone(this)">4</td>
+			<td id="td05" onclick="displayNone(this)">5</td>
+			<td id="td06" onclick="displayNone(this)">6</td>
+		</tr>
+		<tr>
+			<td id="td07" onclick="displayNone(this)">7</td>
+			<td id="td08" onclick="displayNone(this)">8</td>
+			<td id="td09" onclick="displayNone(this)">9</td>
+		</tr>
+	</table>
+	<div class="div01">
+		
+	</div>
+</body>
+</html>
