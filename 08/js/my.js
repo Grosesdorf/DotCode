@@ -15,7 +15,7 @@
 	}
 	function myKeyPress(event){
 		var someText = document.getElementById('div03').innerHTML;
-		if(event.charCode == 97 || event.charCode == 1072){								//charCode и which возвращают одинаковые кода				
+		if((event.charCode == 97 || event.which == 97) || (event.charCode == 1072 || event.which == 1072)){
 			someText += getChar(event).toUpperCase();
 		}
 		else{
