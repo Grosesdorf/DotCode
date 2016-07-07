@@ -11,11 +11,20 @@
 		}
 		
 		function display(id) {
-			document.getElementById(id).style.display='';
+			document.getElementById(id).style.display='table-cell';
 		}
 
 		function innerHtmlToDiv(obj) {
-			document.getElementByClassName('div01').innerHTML = obj.innerHTML;
+			document.getElementById('div01').innerHTML = obj.innerHTML;
+		}
+
+		function innerHtmlCleanDiv() {
+			document.getElementById('div01').innerHTML = '';
+		}
+
+		function addSomeText() {
+			var someText = document.getElementById('td01').innerHTML + document.getElementById('text01').value;
+			document.getElementById('td01').innerHTML = someText;
 		}
 	</script>
 </head>
@@ -39,23 +48,27 @@
 	</table>
 	<table>
 		<tr>
-			<td id="td01" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)">1</td>
-			<td id="td02" onclick="displayNone(this)">2</td>
-			<td id="td03" onclick="displayNone(this)">3</td>
+			<td id="td01" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)" onmouseout="innerHtmlCleanDiv()">01</td>
+			<td id="td02" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)" onmouseout="innerHtmlCleanDiv()">02</td>
+			<td id="td03" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)" onmouseout="innerHtmlCleanDiv()">03</td>
 		</tr>
 		<tr>
-			<td id="td04" onclick="displayNone(this)">4</td>
-			<td id="td05" onclick="displayNone(this)">5</td>
-			<td id="td06" onclick="displayNone(this)">6</td>
+			<td id="td04" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)" onmouseout="innerHtmlCleanDiv()">04</td>
+			<td id="td05" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)" onmouseout="innerHtmlCleanDiv()">05</td>
+			<td id="td06" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)" onmouseout="innerHtmlCleanDiv()">06</td>
 		</tr>
 		<tr>
-			<td id="td07" onclick="displayNone(this)">7</td>
-			<td id="td08" onclick="displayNone(this)">8</td>
-			<td id="td09" onclick="displayNone(this)">9</td>
+			<td id="td07" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)" onmouseout="innerHtmlCleanDiv()">07</td>
+			<td id="td08" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)" onmouseout="innerHtmlCleanDiv()">08</td>
+			<td id="td09" onclick="displayNone(this)" onmouseover="innerHtmlToDiv(this)" onmouseout="innerHtmlCleanDiv()">09</td>
 		</tr>
 	</table>
-	<div class="div01">
-		
+	<div class="div01" id="div01">
+	
+	</div>
+	<div class="div02">
+		<input id="text01" type="text" name="text01" placeholder="Type some text...">
+		<input type="button" name="button01" value="ClickMe!" onclick="addSomeText()">
 	</div>
 </body>
 </html>

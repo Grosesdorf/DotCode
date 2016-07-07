@@ -17,4 +17,12 @@ td {
 	margin: 15px auto;
 	border: 1px solid black;
 	border-radius: 10px; 
+	text-align: center;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+}
+.div02 {
+	margin: 15px auto;
+	text-align: center;
 }
