@@ -3,24 +3,10 @@
   include_once $_SERVER["DOCUMENT_ROOT"] . "/views/header.php";
 ?>
 
-<script type="text/javascript">
-
-  $('.form-reg').parsley().on('form:validate', function (formInstance) {
-    var ok = formInstance.isValid({group: 'block1', force: true});
-    alert(ok);
-    $('.invalid-form-error-message')
-      .html(ok ? '' : 'You must correctly fill *at least one of these two blocks!')
-      .toggleClass('filled', !ok);
-    if (!ok)
-      formInstance.validationResult = false;
-  });
-
-</script>
-
-<div class="invalid-form-error-message"></div>
-
 <h2 class="text-center">Регистрация</h2>
+<div class="invalid-form-error-message text-center"></div>
 <hr>
+
 <form class="form-horizontal form-reg" action="reg.php" method="post" data-parsley-validate="">
   <div class="form-group">
     <label class="control-label col-xs-4 col-lg-4" for="regLastName">Фамилия:</label>
@@ -29,7 +15,8 @@
                          id="regLastName" 
                          name="regLastName"
                          placeholder="Введите фамилию" 
-                         data-parsley-length="[2, 20]" data-parsley-group="block1">
+                         data-parsley-length="[2, 20]" data-parsley-group="block1"
+                         required="">
     </div>
   </div>
   <div class="form-group">
@@ -39,7 +26,8 @@
                          id="regFirstName" 
                          name="regFirstName" 
                          placeholder="Введите имя"
-                         data-parsley-length="[2, 20]" data-parsley-group="block1">
+                         data-parsley-length="[2, 20]" data-parsley-group="block1"
+                         required="">
     </div>
   </div>
   <div class="form-group">
@@ -47,7 +35,7 @@
      <div class="col-xs-5 col-lg-5">
        <div class="input-group">
          <span class="input-group-btn">
-           <select class="form-control" name="bday">
+           <select class="form-control" name="bday" data-parsley-group="block1" required="">
             <option value="">День</option>
               <?php 
                 foreach ($settings["bday"] as $value){ 
@@ -137,7 +125,7 @@
       </label>
     </div>
   </div>
-  <br />
+  <!-- <br /> -->
   <div class="form-group">
     <div class="col-xs-12 col-lg-12 text-center">
       <input type="submit" class="btn btn-primary validate" value="Регистрация">
